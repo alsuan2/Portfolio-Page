@@ -1,0 +1,71 @@
+h2{
+    font-size: 23px;
+    text-align: center;
+    color: black;
+    border: 4px solid white;
+    border-radius: 20px;
+    height: auto;
+    
+}
+h3{
+    color: black;
+    font-size: 10;
+}
+#intro{
+    color: black;
+    width: 450px;
+    font-size: 14px;
+
+}
+
+body{
+    background-color: rgb(233, 205, 205);
+    font-style: normal;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#p2{
+    color: black;
+    font-size: 15px ;
+}
+#p4{
+    color: black;
+    text-align: right;
+
+}
+
+
+#y{
+    font-size: 15px;
+    
+}
+
+ #p4:hover, a:hover {
+    color: palevioletred;
+    text-shadow: 3px solid palevioletred;
+  }
+
+#ed{
+    
+   float:inline-end;
+   margin-top: -520px;
+   margin-right: 380px
+}
+#anem{
+    
+    float:inline-end;
+    margin-top: -500px;
+    width: 450px;
+    font-size: 14px;
+ }
+
+
+#h{
+    color: black;
+    width: 200px;
+    font-size: 14px;
+}
+
