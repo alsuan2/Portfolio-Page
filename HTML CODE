@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="icon" type = "image/jpg" href = "favicon.png">
+        <title id="r1"> Suan's Portfolio</title>
+        <link rel ="stylesheet" href ="style.css">
+        <style>
+
+        </style>
+    </head>
+    <body bgcolor="white">
+        <h2 align="center">Suan Ali's Portfolio</h2>
+        <center>
+        <a id="p4"href="https://www.linkedin.com/in/suan-ali-6b2295302/"
+        target="_blank"
+        title ="Linkedln Profile">
+        Linkedln
+        </a>
+        <a id="p4"href = "Suan Ali CV.pdf"
+        target="_blank"
+        title ="Curriculum Vitae">
+        &nbsp;| CV
+        </a>
+        <a id="p4" href="https://github.com/alsuan2?tab=repositories"
+            target="_blank"
+            title="GitHub Profile">
+        | GitHub
+        </a>
+        <hr>
+    </center>
+        
+        <b>Introduction</b>
+        <p id="intro">Computer science student eager to develop and enhance my critical thinking and coding skills by regularly and consistently learning new programming languages and improving my understanding.  My aspirations are to meet new people who have the knowledge and expertise that I can learn from and progress further into my career. My ambition is to have a successful career in the technology industry and making new friends with like minded individuals in the industry. 
+        </p>
+        <p id="p2"> 
+           <b> Tech Stack:</b> 
+        <ul id="p1">
+           <li>Python  <img src = "download.jpg"
+           height = "17"></li>
+           <li>Java  <img src = "java.png"
+           height = "20"></li>
+           <li>HTML  <img src = "html.png"
+           height = "20"></li>
+           <li>Scheme  <img src = "scheme.jpg"
+           height = "19"></li>
+           <li>CSS  <img src = "css.png"
+           height = "20"></li>
+           <li>C#  <img src = "c.png"
+           height = "20"></li>
+           <li>JavaScript  <img src = "js.png"
+           height = "20"></li>
+        </ul>
+        </p>
+        <h3 style="font-size: 16px;">Projects:</h3>
+        <h3 style="font-size: 14px;">Supermarket Checkout Lane Queue Simulation</h3>
+        <ul id="p1">
+            <li>Simulation system that manages customer checkout lanes </li>
+            <li>Simulation involves a random number of customers being generated for each till/checkout.</li>
+            <li>Checkout time is based on number of items in the basket for each customer</li>
+        </ul>
+        <a style="font-size: 14px"id="p4" href="https://github.com/alsuan2/alsuan2/blob/main/Supermarket%20Checkout%20Lane%20Queue%20Simulation"
+        target="_blank"
+        title="Project Python Code">
+        Source Code
+        </a>
+        <b id="ed">Education</b>
+        <ul id="anem">
+            <li>7 -> (9-4/A*-C) GCSE Qualifications </li>
+            <li>PEARSON BTEC LEVEL 3 NATIONAL DIPLOMA IN BUSINESS  D*D </li>
+            <li>PEARSON BTEC LEVEL 3 NATIONAL EXTENDED CERTIFICATE IN INFORMATION TECHNOLOGY  D </li>
+            <li>A-LEVEL/BTEC RESULTS: D*DD  equivalent to A*AA</li>
+        </ul>
+    </body>
+    <footer style="font-size: 13px;" id="p2">
+        <hr>
+        author: Suan Ali <br>
+        &copy; copyright reserved
+        <br>
+        contact: alisuan982@gmail.com 
+    </footer>
+    
+</html>
