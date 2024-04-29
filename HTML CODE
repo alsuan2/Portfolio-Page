@@ -34,7 +34,7 @@
         <b>Introduction</b>
         <p id="intro">Computer science student eager to develop and enhance my critical thinking and coding skills by regularly and consistently learning new programming languages and improving my understanding.  My aspirations are to meet new people who have the knowledge and expertise that I can learn from and progress further into my career. My ambition is to have a successful career in the technology industry and making new friends with like minded individuals in the industry. 
         </p>
-        <p id="p2"> 
+        <p> 
            <b> Tech Stack:</b> 
         <ul id="p1">
            <li>Python  <img src = "download.jpg"
@@ -71,6 +71,24 @@
             <li>PEARSON BTEC LEVEL 3 NATIONAL DIPLOMA IN BUSINESS  D*D </li>
             <li>PEARSON BTEC LEVEL 3 NATIONAL EXTENDED CERTIFICATE IN INFORMATION TECHNOLOGY  D </li>
             <li>A-LEVEL/BTEC RESULTS: D*DD  equivalent to A*AA</li>
+        </ul>
+        <b id="exp"> Experience & Certifications</b>
+        <ul id="jobs">
+            <li>Lloyds Banking Group - Virtual 
+                • My virtual work experience with Lloyds Banking Group was one of the most exciting experiences I had, this
+                provided me with the opportunity to meet and talk to colleagues from the bank. This opportunity helped me to
+                gain communication skills as I was asked to take part in group activities that required teamwork.
+                • Skills |Collaboration-Communication-Time Management-Teamwork</li>
+            <li>Chartered Accountant ANZ - Virtual 
+                • I have completed a business performance virtual work experience placement that gave me more insight into the
+                financial world. The placement was a fascinating experience because it issued me with numerous tasks that
+                involved financial statements and presentations.
+                • Skills |Critical Thinking – Attention to detail – Statistics – Delivering Presentations</li>
+            <li>Haute Panini 
+                • This experience assisted me in enhancing my abilities such as communication due to the constant interaction with
+                customers, and time management because it’s extremely crucial to meet deadlines and following timeframes
+                provided by managers.
+                • Skills |Customer service skills – Time Management – Oral communication</li>
         </ul>
     </body>
     <footer style="font-size: 13px;" id="p2">
