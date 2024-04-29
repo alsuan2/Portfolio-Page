@@ -87,14 +87,27 @@ body{
 .shape {
     width: 200px;
     height: 270px;
-    background-color:#DFFF00;
+    background-color:#ffe5b4;
     clip-path: circle(50%);
     float: right;
     margin-right: 660px;
     margin-top: 100px;
+    transition: transform 0.5s; 
  }
 .shape img{
     width: 100%;
     height: auto; /* Maintains aspect ratio */
     display: block; /* Ensures the image is centered */
+}
+
+.shape img:hover {
+    animation: rotateAnimation 0.3s ease forwards;
+}
+
+@keyframes rotateAnimation {
+    0% { transform: rotateY(0deg); }
+    25% { transform: rotateY(90deg); }
+    50% { transform: rotateY(180deg); }
+    75% { transform: rotateY(270deg); }
+    100% { transform: rotateY(360deg); }
 }
