@@ -19,17 +19,19 @@
         <a id="p4"href = "Suan Ali CV.pdf"
         target="_blank"
         title ="Curriculum Vitae">
-        &nbsp;| CV
+        |CV
         </a>
         <a id="p4" href="https://github.com/alsuan2?tab=repositories"
             target="_blank"
             title="GitHub Profile">
-        | GitHub
+        |GitHub
         </a>
         <hr>
     </center>
     <div class="shape">
-        <img src="IMG_4660 (1).jpg" alt="Your Image">
+        <img src="IMG_4660 (1).jpg" alt="Your Image"
+        title="Suan Ali">
+        
      </div>
         <b>Introduction</b>
         <p id="intro">Computer science student eager to develop and enhance my critical thinking and coding skills by regularly and consistently learning new programming languages and improving my understanding.  My aspirations are to meet new people who have the knowledge and expertise that I can learn from and progress further into my career. My ambition is to have a successful career in the technology industry and making new friends with like minded individuals in the industry. 
@@ -78,12 +80,12 @@
                 • My virtual work experience with Lloyds Banking Group was one of the most exciting experiences I had, this
                 provided me with the opportunity to meet and talk to colleagues from the bank. This opportunity helped me to
                 gain communication skills as I was asked to take part in group activities that required teamwork.
-                • Skills |Collaboration-Communication-Time Management-Teamwork</li>
+                • Skills |Collaboration-Communication-Time Management-Teamwork</li><br>
             <li>Chartered Accountant ANZ - Virtual 
                 • I have completed a business performance virtual work experience placement that gave me more insight into the
                 financial world. The placement was a fascinating experience because it issued me with numerous tasks that
                 involved financial statements and presentations.
-                • Skills |Critical Thinking – Attention to detail – Statistics – Delivering Presentations</li>
+                • Skills |Critical Thinking – Attention to detail – Statistics – Delivering Presentations</li><br>
             <li>Haute Panini 
                 • This experience assisted me in enhancing my abilities such as communication due to the constant interaction with
                 customers, and time management because it’s extremely crucial to meet deadlines and following timeframes
