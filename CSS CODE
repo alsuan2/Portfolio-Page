@@ -88,7 +88,6 @@ body{
 .shape {
     width: 200px;
     height: 270px;
-    background-color:#ffe5b4;
     clip-path: circle(50%);
     float: right;
     margin-right: 660px;
