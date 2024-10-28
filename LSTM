@@ -1,0 +1,96 @@
+import math
+import pandas as pd
+import matplotlib.pyplot as plt
+import yfinance as yf
+import numpy as np
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+from sklearn.preprocessing import MinMaxScaler
+
+# Fetching the stock data
+stock = "AAPL"
+data = yf.download(stock, start="2019-10-27", end="2024-10-27", interval="1d")
+
+# Save and read data to/from CSV (optional, since we're downloading directly)
+data.to_csv("TSLA_stock_history.csv")
+data = pd.read_csv("TSLA_stock_history.csv", skiprows=2)
+
+# Rename columns and convert Date
+data['Date'] = pd.to_datetime(data['Date'])  # Convert 'Date' to datetime
+data.set_index('Date', inplace=True)  # Set 'Date' as the index
+
+data = data.rename(columns={'Unnamed: 1': 'Close'})  # Rename as needed
+date_close_data = data[['Close']]
+date_close_data['Close'] = pd.to_numeric(date_close_data['Close'])
+
+# Create a new dataframe with only the "Close column"
+d = date_close_data.filter(["Close"])
+dataset = d.values
+
+# Splitting the data
+training_data_len = math.ceil(len(dataset) * .8)
+
+# Scale the data
+scaler = MinMaxScaler(feature_range=(0, 1))
+scaled_data = scaler.fit_transform(dataset)
+
+# Create training data
+train_data = scaled_data[0:training_data_len, :]
+x_train, y_train = [], []
+
+for i in range(60, len(train_data)):
+    x_train.append(train_data[i-60:i, 0])
+    y_train.append(train_data[i, 0])
+
+x_train, y_train = np.array(x_train), np.array(y_train)
+x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+
+# Build the LSTM model
+model = Sequential()
+model.add(LSTM(50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
+model.add(LSTM(50, return_sequences=False))
+model.add(Dense(25))
+model.add(Dense(1))
+
+# Compile and train the model
+model.compile(optimizer="adam", loss="mean_squared_error")
+model.fit(x_train, y_train, batch_size=1, epochs=1)
+
+# Create the testing data set
+test_data = scaled_data[training_data_len - 60:, :]
+x_test = []
+y_test = dataset[training_data_len:, :]
+
+for i in range(60, len(test_data)):
+    x_test.append(test_data[i-60:i, 0])
+
+x_test = np.array(x_test)
+x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+
+# Predictions
+predictions = model.predict(x_test)
+predictions = scaler.inverse_transform(predictions)
+
+# Get the RMSE
+rmse = np.sqrt(np.mean(((predictions - y_test) ** 2)))
+
+# Create train and validation datasets
+train = data[:training_data_len]
+valid = data[training_data_len:]
+
+# Assign predictions to valid DataFrame
+valid["Predictions"] = predictions
+
+# Visualize the data
+plt.figure(figsize=(16, 8))
+plt.title("Model")
+plt.xlabel("Date", fontsize=18)
+plt.ylabel("Close Price USD ($)", fontsize=18)
+
+# Use index for plotting
+plt.plot(train.index, train["Close"], label='Train')
+plt.plot(valid.index, valid["Close"], label='Validation')
+plt.plot(valid.index, valid["Predictions"], label='Predictions')
+
+plt.legend(loc="lower right")
+plt.show()
